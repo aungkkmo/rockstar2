@@ -1,22 +1,20 @@
+
 import React from 'react'
 
-class Add extends React.Component{
-  constructor(){
-    super();
-    this.input = React.createRef();
-  }
-  render(){
-    return (
-      <div>
-        <input type="text" ref={this.input}/>
+const Add = props => {
+  let input = React.createRef();
+
+  return (
+       <div>
+        <input type="text" ref={input}/>
         <button onClick={() => {
-            this.props.add(
-                this.input.current.value
+            props.add(
+                input.current.value
             );
         }}>+</button>
       </div>
-    )
-  }
+      )
+
 }
 
 

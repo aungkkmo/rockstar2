@@ -4,11 +4,8 @@ import Add from './Add'
 
 
 class App extends React.Component{
-	constructor(){
-		super();
-		this.state ={
-			data : ['Milk','Eggg'],
-		}
+	state = {
+		data  : ['a','b']
 	}
 
 	add = (name) =>{
